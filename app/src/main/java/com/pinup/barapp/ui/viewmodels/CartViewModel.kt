@@ -1,31 +1,23 @@
 package com.pinup.barapp.ui.viewmodels
 
-import android.app.Application
-import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
-import com.pinup.barapp.data.remote.local.AppDatabase
 import com.pinup.barapp.data.repositories.CartRepository
 import com.pinup.barapp.domain.models.CartItem
 import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 import kotlinx.coroutines.launch
 
 @HiltViewModel
-class CartViewModel(application: Application) : AndroidViewModel(application) {
-
+class CartViewModel @Inject constructor(
     private val repository: CartRepository
-    val totalQuantity: LiveData<Int>
-    val totalPrice: LiveData<Double>
-    val cartItems: LiveData<List<CartItem>>
+) : ViewModel() {
 
-    init {
-        val dao = AppDatabase.getDatabase(application).cartDao()
-        repository = CartRepository(dao)
-        totalQuantity = repository.getTotalQuantity().asLiveData()
-        totalPrice = repository.getTotalPrice().asLiveData()
-        cartItems = repository.getAll().asLiveData()
-    }
+    val totalQuantity: LiveData<Int> = repository.getTotalQuantity().asLiveData()
+    val totalPrice: LiveData<Double> = repository.getTotalPrice().asLiveData()
+    val cartItems: LiveData<List<CartItem>> = repository.getAll().asLiveData()
 
     fun addToCart(item: CartItem) {
         viewModelScope.launch {
@@ -50,4 +42,4 @@ class CartViewModel(application: Application) : AndroidViewModel(application) {
             repository.deleteById(item.id)
         }
     }
-} 
+}
