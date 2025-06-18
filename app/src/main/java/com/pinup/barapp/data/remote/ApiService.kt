@@ -1,6 +1,7 @@
 package com.pinup.barapp.data.remote
 
 import com.pinup.barapp.data.remote.dto.MatchResponse
+import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
@@ -11,5 +12,5 @@ interface ApiService {
         @Path("from") fromDate: String,
         @Path("to") toDate: String,
         @Query("api_token") apiKey: String
-    ): MatchResponse
+    ): Response<MatchResponse>
 }
