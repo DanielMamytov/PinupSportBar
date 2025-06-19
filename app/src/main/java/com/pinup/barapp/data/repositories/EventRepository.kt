@@ -128,44 +128,60 @@ object EventRepository {
         ),
         Event(
             id = 6,
-            title = "Hen Party at Pin-up!",
-            description = "A compliment to every girl – a free cocktail for a table of 20€ or more.",
+            title = "Девичник в Pin-up!",
+            description = "Комплимент для каждой девушки – бесплатный коктейль при заказе от 20€.",
             imageRes = R.drawable.event_hen_party,
             detail = EventDetail(
-                title = "Hen Party at Pin-up!",
-                subtitle = "Free cocktail for orders over 20€",
-                mainInfo = "Gather your girlfriends and have fun!",
-                timeTitle = "Time:",
-                timeValue = "Saturdays after 18:00",
-                featuresTitle = null,
-                features = null,
-                promoTitle = null,
-                promoList = null,
+                title = "Девичник в Pin-up!",
+                subtitle = "Комплимент для каждой девушки – бесплатный коктейль при заказе от 20€.",
+                mainInfo = "Настроение – флирт, стиль – Pin-up, напитки – идеальные!",
+                timeTitle = "Время проведения:",
+                timeValue = "Каждую субботу с 20:00",
+                featuresTitle = "Что вас ждет?",
+                features = listOf(
+                    "Бесплатный коктейль для каждой девушки при заказе от 20€.",
+                    "Яркая Pin-up атмосфера – стильные декорации, музыка и специальные фотозоны.",
+                    "Специальные сеты закусок и коктейлей для шумных девичников.",
+                    "Диджей-сеты и тематические вечеринки!"
+                ),
+                promoTitle = "Комплимент на выбор:",
+                promoList = listOf(
+                    "Pink Lady – нежный вкус с нотками ванили и граната.",
+                    "Margarita Passion – классика с фруктовым акцентом.",
+                    "Sex on the Beach – культовый коктейль для яркой ночи!"
+                ),
                 extraTitle = null,
                 extraList = null,
-                howToTitle = "How to get compliment?",
-                howTo = "Book a table and order drinks for 20€ or more"
+                howToTitle = "Как воспользоваться?",
+                howTo = "1) Собирай подруг и приходи в субботу вечером.\n2) Заказывайте любимые блюда и напитки.\n3) Получайте бесплатный коктейль и наслаждайтесь вечеринкой!"
             )
         ),
         Event(
             id = 7,
-            title = "Birthday at Pin-up!",
-            description = "Birthday boys and girls get a set of shots as a gift! Just open your passport and celebrate loudly!",
+            title = "День рождения в Pin-up!",
+            description = "Именинникам – сет шотов в подарок! Просто покажи паспорт и отпразднуй громко!",
             imageRes = R.drawable.event_birthday,
             detail = EventDetail(
-                title = "Birthday at Pin-up!",
-                subtitle = "Shots set for the birthday person",
-                mainInfo = "Celebrate your birthday in a big way!",
-                timeTitle = "Any day:",
-                timeValue = "Celebrate whenever you like",
-                featuresTitle = null,
-                features = null,
-                promoTitle = null,
-                promoList = null,
+                title = "День рождения в Pin-up!",
+                subtitle = "Именинникам – сет шотов в подарок! Просто покажи паспорт и отпразднуй громко!",
+                mainInfo = "Твой праздник – наши угощения! Ждем в Pin-up!",
+                timeTitle = "Время проведения:",
+                timeValue = "В день твоего рождения + 3 дня после",
+                featuresTitle = "Как мы поздравляем?",
+                features = listOf(
+                    "Сет шотов в подарок для именинника!",
+                    "Скидка 10% на весь заказ для компании.",
+                    "Возможность заказать персональный коктейль с именем именинника.",
+                    "Яркое поздравление от команды бара и праздничная атмосфера!"
+                ),
+                promoTitle = "Бонус:",
+                promoList = listOf(
+                    "Если собираешь компанию от 6 человек, мы дарим еще бонусный коктейль!"
+                ),
                 extraTitle = null,
                 extraList = null,
-                howToTitle = "How to get gift?",
-                howTo = "Show your ID to the bartender"
+                howToTitle = "Как воспользоваться?",
+                howTo = "1) Приходи в день рождения или в течение 3 дней после.\n2) Покажи паспорт/ID официанту.\n3) Получи сет шотов и празднуй с размахом!"
             )
         )
     )
