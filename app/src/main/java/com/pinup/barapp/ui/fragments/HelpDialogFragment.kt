@@ -1,5 +1,18 @@
 package com.pinup.barapp.ui.fragments
 
+import android.view.Gravity
+import android.view.WindowManager
+
+    override fun onStart() {
+        super.onStart()
+        dialog?.window?.setLayout(
+            (resources.displayMetrics.widthPixels * 0.85).toInt(),
+            WindowManager.LayoutParams.WRAP_CONTENT,
+        )
+        dialog?.window?.setBackgroundDrawableResource(android.R.color.transparent)
+        dialog?.window?.setGravity(Gravity.CENTER)
+    }
+
 
 import android.content.DialogInterface
 import android.os.Bundle
