@@ -88,6 +88,10 @@
     <fragment
         android:id="@+id/reservationQrFragment"
         android:name="com.pinup.barapp.ui.fragments.ReservationQrFragment"
-        android:label="reservationQrFragment" />
+        android:label="reservationQrFragment" >
+        <argument
+            android:name="reservationId"
+            app:argType="string" />
+    </fragment>
 
 </navigation>

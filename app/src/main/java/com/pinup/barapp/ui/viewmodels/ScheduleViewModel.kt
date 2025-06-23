@@ -9,6 +9,8 @@ import com.pinup.barapp.domain.models.Match
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 import kotlinx.coroutines.launch
+import java.time.LocalDate
+import java.time.Month
 
 @HiltViewModel
 class ScheduleViewModel @Inject constructor(
@@ -27,6 +29,14 @@ class ScheduleViewModel @Inject constructor(
     fun loadRecentMatches() {
         viewModelScope.launch {
             _matches.value = repository.getRecentMatches()
+        }
+    }
+
+    fun loadMatchesForMonth(month: Month, year: Int = LocalDate.now().year) {
+        viewModelScope.launch {
+            val start = LocalDate.of(year, month, 1)
+            val end = start.withDayOfMonth(start.lengthOfMonth())
+            _matches.value = repository.getMatchesBetween(start, end)
         }
     }
 }
