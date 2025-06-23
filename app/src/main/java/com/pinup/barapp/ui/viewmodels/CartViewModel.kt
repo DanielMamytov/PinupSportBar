@@ -32,4 +32,8 @@ class CartViewModel @Inject constructor(
     fun removeFromCart(item: CartItem) {
         viewModelScope.launch { repository.deleteById(item.id) }
     }
+
+    fun clearCart() {
+        viewModelScope.launch { repository.clearCart() }
+    }
 }
