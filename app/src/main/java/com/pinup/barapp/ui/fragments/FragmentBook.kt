@@ -40,7 +40,9 @@ class FragmentBook : Fragment(R.layout.fragment_book) {
                 tableNumber = binding.etTableNumber.text.toString()
             )
             viewModel.addReservation(reservation)
-            findNavController().navigate(R.id.reservationQrFragment)
+            val reservationId = (1000..9999).random().toString()
+            val action = FragmentBookDirections.actionFragmentBookToReservationQrFragment(reservationId)
+            findNavController().navigate(action)
         }
     }
 
