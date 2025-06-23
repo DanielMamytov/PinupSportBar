@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- Картинка события и кнопка назад -->
+        <!-- Event image and back button -->
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="220dp"
@@ -38,7 +38,7 @@
                 android:elevation="4dp"/>
         </FrameLayout>
 
-        <!-- Белый блок с закруглением сверху -->
+        <!-- White block with rounded top -->
         <LinearLayout
             android:id="@+id/contentContainer"
             android:layout_width="match_parent"
@@ -50,7 +50,7 @@
             android:paddingLeft="22dp"
             android:paddingRight="22dp">
 
-            <!-- Заголовок -->
+            <!-- Title -->
             <TextView
                 android:id="@+id/tvTitle"
                 android:layout_width="match_parent"
@@ -62,7 +62,7 @@
                 android:fontFamily="@font/avantgarde_demi"
                 android:layout_marginBottom="4dp"/>
 
-            <!-- Описание/подзаголовок -->
+            <!-- Description / subtitle -->
             <TextView
                 android:id="@+id/tvSubtitle"
                 android:layout_width="match_parent"
@@ -73,7 +73,7 @@
                 android:fontFamily="@font/avantgarde_demi"
                 android:layout_marginBottom="16dp"/>
 
-            <!-- Время: отдельный контейнер -->
+            <!-- Time: separate container -->
             <LinearLayout
                 android:id="@+id/timeContainer"
                 android:layout_width="match_parent"
@@ -102,7 +102,7 @@
                     android:fontFamily="@font/avantgarde_demi"/>
             </LinearLayout>
 
-            <!-- Основной инфоблок (например, What awaits you?) -->
+            <!-- Main info block (e.g. What awaits you?) -->
             <TextView
                 android:id="@+id/tvMainBlockTitle"
                 android:layout_width="match_parent"
@@ -113,7 +113,7 @@
                 android:fontFamily="@font/avantgarde_demi"
                 android:layout_marginBottom="5dp"/>
 
-            <!-- Список плюшек (динамически наполняется в коде) -->
+            <!-- Feature list (filled dynamically in code) -->
             <LinearLayout
                 android:id="@+id/featureListContainer"
                 android:layout_width="match_parent"
@@ -121,7 +121,7 @@
                 android:orientation="vertical"
                 android:layout_marginBottom="15dp" />
 
-            <!-- Промо-блок (топовые коктейли и т.д.) -->
+            <!-- Promo block (top cocktails etc.) -->
             <TextView
                 android:id="@+id/tvPromoTitle"
                 android:layout_width="match_parent"
@@ -133,7 +133,7 @@
                 android:layout_marginBottom="5dp"
                 android:visibility="gone"/>
 
-            <!-- Список промо (динамически в коде) -->
+            <!-- Promo list (generated in code) -->
             <LinearLayout
                 android:id="@+id/promoListContainer"
                 android:layout_width="match_parent"
@@ -142,7 +142,7 @@
                 android:layout_marginBottom="15dp"
                 android:visibility="gone"/>
 
-            <!-- How to use блок (светлый фон) -->
+            <!-- How to use block (light background) -->
             <LinearLayout
                 android:id="@+id/howToContainer"
                 android:layout_width="match_parent"
