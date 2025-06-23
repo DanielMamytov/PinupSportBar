@@ -44,10 +44,10 @@ class ScheduleFragment : Fragment(R.layout.fragment_schedule) {
         val months = Month.values().map { it.getDisplayName(TextStyle.FULL, Locale.US) }
         val spinnerAdapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, months)
         spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        binding.spinnerMonth.adapter = spinnerAdapter
-        binding.spinnerMonth.setSelection(LocalDate.now().monthValue - 1)
+        binding.tvMonth.adapter = spinnerAdapter
+        binding.tvMonth.setSelection(LocalDate.now().monthValue - 1)
 
-        binding.spinnerMonth.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+        binding.tvMonth.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
                 val month = Month.of(position + 1)
                 viewModel.loadMatchesForMonth(month)

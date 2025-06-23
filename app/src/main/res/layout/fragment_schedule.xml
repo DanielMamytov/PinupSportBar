@@ -79,7 +79,7 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <Spinner
-            android:id="@+id/spinnerMonth"
+            android:id="@+id/tvMonth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:spinnerMode="dropdown"
@@ -93,10 +93,10 @@
             android:layout_height="1dp"
             android:layout_marginStart="8dp"
             android:background="#00A264"
-            app:layout_constraintStart_toEndOf="@id/spinnerMonth"
+            app:layout_constraintStart_toEndOf="@id/tvMonth"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/spinnerMonth"
-            app:layout_constraintBottom_toBottomOf="@id/spinnerMonth"/>
+            app:layout_constraintTop_toTopOf="@id/tvMonth"
+            app:layout_constraintBottom_toBottomOf="@id/tvMonth"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.recyclerview.widget.RecyclerView
