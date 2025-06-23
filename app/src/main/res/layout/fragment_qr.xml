@@ -15,7 +15,7 @@
         android:src="@drawable/qr_girl"
         android:scaleType="fitCenter"
         />
-    <!-- Основной контент -->
+    <!-- Main content -->
     <LinearLayout
         android:id="@+id/content"
         android:orientation="vertical"
@@ -28,7 +28,7 @@
         android:paddingTop="32dp"
         android:paddingBottom="32dp">
 
-        <!-- Заголовок -->
+        <!-- Title -->
         <TextView
             android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
@@ -40,7 +40,7 @@
             android:textColor="@android:color/black"
             android:gravity="center"/>
 
-        <!-- Подзаголовок -->
+        <!-- Subtitle -->
         <TextView
             android:id="@+id/tvSubtitle"
             android:layout_width="wrap_content"
@@ -53,19 +53,19 @@
             android:gravity="center"
             android:layout_marginTop="8dp"/>
 
-        <!-- Отступ -->
+        <!-- Spacer -->
         <View
             android:layout_width="match_parent"
             android:layout_height="24dp"/>
 
-        <!-- Блок QR и девушки -->
+        <!-- QR block and image -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:elevation="-1dp"
             android:orientation="horizontal">
 
-            <!-- Карточка QR -->
+            <!-- QR card -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardQr"
                 android:layout_width="250dp"
@@ -81,12 +81,12 @@
                     android:scaleType="fitCenter" />
             </androidx.cardview.widget.CardView>
 
-            <!-- Девушка -->
+            <!-- Girl image -->
 
 
         </LinearLayout>
 
-        <!-- Отступ -->
+        <!-- Spacer -->
         <View
             android:layout_width="match_parent"
             android:layout_height="20dp"/>
@@ -104,7 +104,7 @@
             android:layout_marginBottom="10dp"
             android:gravity="center"/>
 
-        <!-- Estimated Wait -->
+        <!-- Estimated wait -->
         <TextView
             android:id="@+id/tvEstimatedWait"
             android:layout_width="wrap_content"
@@ -117,7 +117,7 @@
             android:layout_marginTop="2dp"/>
     </LinearLayout>
 
-    <!-- Кнопка внизу -->
+    <!-- Bottom button -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnBackHome"
         android:layout_width="match_parent"

@@ -78,14 +78,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <TextView
-            android:id="@+id/tvMonth"
+        <Spinner
+            android:id="@+id/spinnerMonth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="June ▼"
-            android:textColor="#00A264"
-            android:textSize="16sp"
-            android:textStyle="bold"
+            android:spinnerMode="dropdown"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
@@ -96,10 +93,10 @@
             android:layout_height="1dp"
             android:layout_marginStart="8dp"
             android:background="#00A264"
-            app:layout_constraintStart_toEndOf="@id/tvMonth"
+            app:layout_constraintStart_toEndOf="@id/spinnerMonth"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/tvMonth"
-            app:layout_constraintBottom_toBottomOf="@id/tvMonth"/>
+            app:layout_constraintTop_toTopOf="@id/spinnerMonth"
+            app:layout_constraintBottom_toBottomOf="@id/spinnerMonth"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.recyclerview.widget.RecyclerView
@@ -112,6 +109,19 @@
         android:paddingTop="16dp"
         android:paddingBottom="80dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/month_section"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvEmpty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No matches scheduled"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:visibility="gone"
         app:layout_constraintTop_toBottomOf="@id/month_section"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"

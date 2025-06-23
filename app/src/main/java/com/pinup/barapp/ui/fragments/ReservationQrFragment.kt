@@ -9,6 +9,7 @@ import androidx.core.graphics.createBitmap
 import androidx.core.graphics.set
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.qrcode.QRCodeWriter
 import com.pinup.barapp.R
@@ -19,6 +20,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class ReservationQrFragment : Fragment() {
     private var _binding: FragmentReservationQrBinding? = null
     private val binding get() = _binding!!
+    private val args by navArgs<ReservationQrFragmentArgs>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -31,13 +33,13 @@ class ReservationQrFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val reservationId = "2849"
+        val reservationId = args.reservationId
         val qrBitmap = generateQRCode(reservationId)
         binding.ivQr.setImageBitmap(qrBitmap)
         binding.tvOrderId.text = "Reservation #$reservationId"
 
         binding.btnBackHome.setOnClickListener {
-            findNavController().navigateUp()
+            findNavController().popBackStack(R.id.menuFragment, false)
         }
     }
 

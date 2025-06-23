@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.navArgs
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.qrcode.QRCodeWriter
@@ -14,12 +15,14 @@ import com.pinup.barapp.databinding.FragmentQrBinding
 import androidx.core.graphics.createBitmap
 import androidx.core.graphics.set
 import androidx.navigation.fragment.findNavController
+import com.pinup.barapp.ui.viewmodels.CartViewModel
 
 class QRFragment : Fragment() {
 
     private var _binding: FragmentQrBinding? = null
     private val binding get() = _binding!!
     private val args by navArgs<QRFragmentArgs>()
+    private val cartViewModel: CartViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
@@ -37,7 +40,8 @@ class QRFragment : Fragment() {
         binding.tvOrderId.text = "Order #$orderId"
 
         binding.btnBackHome.setOnClickListener {
-            findNavController().navigateUp()
+            cartViewModel.clearCart()
+            findNavController().popBackStack(R.id.menuFragment, false)
         }
     }
 

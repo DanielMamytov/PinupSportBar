@@ -55,7 +55,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <!-- декоративный фон с «выходящими» картинками -->
+        <!-- decorative background with floating images -->
         <ImageView
             android:id="@+id/decor_bg"
             android:layout_width="match_parent"
@@ -65,7 +65,7 @@
             android:scaleType="centerCrop"
             android:translationY="30dp"/>
 
-        <!-- вся нижняя панель с линией, суммой и кнопкой -->
+        <!-- entire bottom panel with line, total and button -->
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -73,7 +73,7 @@
             android:paddingStart="24dp"
             android:paddingEnd="24dp">
 
-            <!-- разделитель -->
+            <!-- divider -->
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
